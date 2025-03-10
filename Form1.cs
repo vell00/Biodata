@@ -22,6 +22,8 @@ namespace Biodata
         private string alamat, query;
         public Form1()
         {
+            alamat = "server=localhost; database=db_mahasiswa; username=root; password=;";
+            koneksi = new MySqlConnection(alamat);
             InitializeComponent();
         }
 
@@ -84,12 +86,6 @@ namespace Biodata
             {
                 MessageBox.Show(ex.ToString());
             }
-
-
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
